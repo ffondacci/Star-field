@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Star_Field" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="YFb-un-mrK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NX1-67-HSr" customClass="StarField" customModule="Star_Field" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="NX1-67-HSr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="2e6-7C-RsK"/>
+                            <constraint firstAttribute="trailing" secondItem="YFb-un-mrK" secondAttribute="trailing" id="Kiw-bd-e26"/>
+                            <constraint firstItem="YFb-un-mrK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="Mxv-hh-ihk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NX1-67-HSr" secondAttribute="bottom" id="Qxj-Ck-mb8"/>
+                            <constraint firstItem="NX1-67-HSr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Wy9-Iy-HOW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YFb-un-mrK" secondAttribute="bottom" id="f89-oc-uFU"/>
+                            <constraint firstAttribute="trailing" secondItem="NX1-67-HSr" secondAttribute="trailing" id="fHn-Rr-HDg"/>
+                            <constraint firstItem="YFb-un-mrK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x5u-l3-ZNL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95" y="53"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="640" height="960"/>
+    </resources>
+</document>
