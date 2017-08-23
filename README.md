@@ -1,7 +1,7 @@
 # Star-field 💫
 An infinite star field written in swift
 
-(https://media.giphy.com/media/xUPJUHHheyDyz83ByE/giphy.gif)
+![Star Field Preview](https://media.giphy.com/media/xUPJUHHheyDyz83ByE/giphy.gif)
 
 ## Features: 
 - Display stars ! 😂
