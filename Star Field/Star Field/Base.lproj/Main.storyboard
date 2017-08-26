@@ -31,9 +31,9 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="NX1-67-HSr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="2e6-7C-RsK"/>
+                            <constraint firstItem="NX1-67-HSr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2e6-7C-RsK"/>
                             <constraint firstAttribute="trailing" secondItem="YFb-un-mrK" secondAttribute="trailing" id="Kiw-bd-e26"/>
-                            <constraint firstItem="YFb-un-mrK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="Mxv-hh-ihk"/>
+                            <constraint firstItem="YFb-un-mrK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Mxv-hh-ihk"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NX1-67-HSr" secondAttribute="bottom" id="Qxj-Ck-mb8"/>
                             <constraint firstItem="NX1-67-HSr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Wy9-Iy-HOW"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YFb-un-mrK" secondAttribute="bottom" id="f89-oc-uFU"/>
@@ -41,6 +41,8 @@
                             <constraint firstItem="YFb-un-mrK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x5u-l3-ZNL"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
