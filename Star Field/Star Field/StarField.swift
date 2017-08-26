@@ -17,6 +17,7 @@ class StarField: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        print("frame 2 = \(frame.size.width) -- height 2 = \(frame.size.height)")
         self.setUp()
     }
     
@@ -25,11 +26,15 @@ class StarField: UIView {
         self.setUp()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.starFieldLayer.position = CGPoint(x: Int(frame.size.width / 2), y: Int(frame.size.height / 2))
+    }
+    
     func setUp () {
         self.layer.addSublayer(self.starFieldLayer)
-        self.starFieldLayer.position = CGPoint(x: Int(frame.size.width / 2), y: Int(frame.size.height / 2))
-        self.buildStarField()
         self.backgroundColor = UIColor.clear
+        self.buildStarField()
     }
     
     private func buildStarField () {
@@ -56,7 +61,6 @@ class StarField: UIView {
             
             // Layer content :
             let whichContent = Int.random(from: 1, 4)
-            print("starfield-star-\(whichContent)")
             layer.contents = UIImage(named: "starfield-star-\(whichContent)")?.cgImage
             
             // Layer bounds :
@@ -66,12 +70,19 @@ class StarField: UIView {
             // Animation:
             let duration = Double(Float.random(from: 2, 30))
             
+            // TO DO: not elegant for swift, will change later. 
+            // Where the stars will stop in their position max value ?
+            let boundsToValue = (self.frame.size.width > self.frame.size.height) == true ? (Float(self.frame.size.width) + Float.random(from: 0, 50)) : (Float(self.frame.size.height) + Float.random(from: 0, 50))
+            
+            // Where the stars will start away from center max value ?
+            let boundsFromValue = (self.frame.size.width > self.frame.size.height) == true ? (Float(self.frame.size.width) * 50 / 100) : (Float(self.frame.size.height) * 50 / 100)
+            
                 // position
             let positionAnimation = CABasicAnimation(keyPath: "zPosition")
             // FromValue will determinate the how far from the center the stars will start
-            positionAnimation.fromValue = NSNumber(value: Float.random(from: 100, 1000))
+            positionAnimation.fromValue = NSNumber(value: Float.random(from: 100, boundsFromValue))
             // Tovalue will determinate how far the stars will get more near from the center
-            positionAnimation.toValue = NSNumber(value: Float.random(from: -400, -200))
+            positionAnimation.toValue = NSNumber(value: Float.random(from: -200, -(boundsToValue)))
             positionAnimation.duration = duration
             positionAnimation.repeatCount = Float.infinity
             positionAnimation.isRemovedOnCompletion = false
