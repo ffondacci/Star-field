@@ -72,7 +72,7 @@ class StarField: UIView {
             
             // TO DO: not elegant for swift, will change later. 
             // Where the stars will stop in their position max value ?
-            let boundsToValue = (self.frame.size.width > self.frame.size.height) == true ? (Float(self.frame.size.width) + Float.random(from: 0, 50)) : (Float(self.frame.size.height) + Float.random(from: 0, 50))
+            let boundsToValue = (self.frame.size.width > self.frame.size.height) == true ? (Float(self.frame.size.height) + Float.random(from: 0, 50)) : (Float(self.frame.size.width) + Float.random(from: 0, 50))
             
             // Where the stars will start away from center max value ?
             let boundsFromValue = (self.frame.size.width > self.frame.size.height) == true ? (Float(self.frame.size.width) * 50 / 100) : (Float(self.frame.size.height) * 50 / 100)
